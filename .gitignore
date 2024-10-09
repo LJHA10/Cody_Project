@@ -300,3 +300,4 @@ firebase.json
 settings.json
 
 firebase_credentials/credentials.json
+firebase_credentials/
