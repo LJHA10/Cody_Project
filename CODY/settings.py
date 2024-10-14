@@ -11,10 +11,17 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
+import firebase_admin
+from firebase_admin import credentials
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+# Ruta al archivo de credenciales de Firebase
 BASE_DIR = Path(__file__).resolve().parent.parent
+firebase_cred_path = os.path.join(BASE_DIR, 'firebase_credentials', 'firebase_credentials.json')
 
+# Inicializar Firebase con las credenciales
+cred = credentials.Certificate(firebase_cred_path)
+firebase_admin.initialize_app(cred)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -37,6 +44,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'registro',
+    'perfil',   
 ]
 
 MIDDLEWARE = [

@@ -5,7 +5,9 @@
 *.log
 *.pot
 *.pyc
-_pycache_/
+
+__pycache__/
+
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
@@ -22,9 +24,10 @@ media
 
 # C extensions
 *.so
-/firebase_credentials/
+
 /firebase_credentials/firebase_credentials.json
 CODY/Scripts/activate
+
 # Distribution / packaging
 .Python
 build/
@@ -124,7 +127,8 @@ ipython_config.py
 .pdm.toml
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
-_pypackages_/
+
+__pypackages__/
 
 # Celery stuff
 celerybeat-schedule
@@ -252,12 +256,14 @@ $RECYCLE.BIN/
 *.log
 *.pot
 *.py[cod]
-_pycache_/
+
+__pycache__/
 db.sqlite3
 media/
 staticfiles/
 *.pyc
-_pycache_/
+
+__pycache__/
 *.pyo
 *.pyd
 *.pdb
@@ -266,13 +272,15 @@ _pycache_/
 .env.*
 
 # Django migrations
-/migrations/
+
+*/migrations/*
 
 # Byte-compiled / optimized / DLL files
 *.pyc
 *.pyo
 *.pyd
-_pycache_/
+
+__pycache__/
 
 # ENV for virtual environments
 env/
@@ -302,4 +310,5 @@ firebase.json
 settings.json
 
 firebase_credentials/credentials.json
+
 firebase_credentials/
