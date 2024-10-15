@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'registro',
     'loginapp',
-]
+    'perfil',
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
