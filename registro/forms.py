@@ -3,5 +3,6 @@
 from django import forms
 
 class RegistroForm(forms.Form):
-    nombre = forms.CharField(label='Nombre', max_length=100)
-    correo = forms.EmailField(label='Correo')
+    nombre = forms.CharField(max_length=100)
+    correo = forms.EmailField()
+    contrasena = forms.CharField(widget=forms.PasswordInput()) 
