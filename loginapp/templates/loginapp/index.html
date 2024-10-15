@@ -1,0 +1,332 @@
+{% comment %} <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+</head>
+<body>
+    <h1>Bienvenido a la Aplicación</h1>
+    <p><a href="{% url 'login' %}">Iniciar sesión</a></p>
+</body>
+</html> {% endcomment %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'loginapp/css/home.css' %}">
+    <title>MONTANA GYM </title>
+</head>
+<body>
+    <!-- MENU -->
+    <div class="contenedor-header">
+        <header>
+            <h1>MONTANA <span class="txtRojo">GYM</span></h1>
+            <nav id="nav">
+                <a href="#inicio" onclick="seleccionar()">inicio</a>
+                <a href="#nosotros" onclick="seleccionar()">Nosotros</a>
+                <a href="#servicios" onclick="seleccionar()">Servicios</a>
+                <a href="#comodidades" onclick="seleccionar()">Comodidades</a>
+                <a href="#galeria" onclick="seleccionar()">Galería</a>
+                <a href="#equipo" onclick="seleccionar()">Equipo</a>
+                <a href="#contacto" onclick="seleccionar()">Contacto</a>
+            </nav>
+            <div class="redes">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            </div>
+            <!-- Icono del menu responsive -->
+            <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>                
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-seccion">
+            <div class="info">
+                <h2> MONTANA <span class="txtRojo">GYM</span></h2>
+                <p>Transorma tu cuerpo, supera tus límites</p>
+                <a href="#nosotros" class="btn-mas">
+                    <i class="fa-solid fa-circle-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION NOSOTROS -->
+    <section id="nosotros" class="nosotros">
+        <div class="fila">
+            <div class="col">
+                <img src="{% static 'loginapp/images/nosotros.png' %}" alt="">
+            </div>
+            <div class="col">
+                <div class="contenedor-titulo">
+                    <div class="numero">
+                        01
+                    </div>
+                    <div class="info">
+                        <span class="frase">LA MEJOR EXPERIENCIA</span>
+                        <h2 class="titlegood">NOSOTROS</h2>
+                    </div>
+                </div>
+                <p>En MONTANA GYM , estamos comprometidos con ayudarte a alcanzar tus metas de bienestar y salud. Ofrecemos un ambiente motivador, con entrenador calificado y un enfoque personalizado. Ya sea que busques ganar fuerza, mejorar tu resistencia o bienestar general, estamos aquí para apoyarte en cada paso del camino.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="fila-nosotros">
+        </div>
+    </section>
+
+    <!-- SECCION SERVICIOS -->
+    <section class="servicios" id="servicios">
+        <div class="contenido-seccion">
+            <div class="fila">
+                <div class="col">
+                    <div class="contenedor-titulo">
+                        <div class="numero">
+                            02
+                        </div>
+                        <div class="info">
+                            <span class="frase">LA MEJOR EXPERIENCIA</span>
+                            <h2>SERVICIOS</h2>
+                        </div>
+                    </div>
+                    <p class="p-especial">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur necessitatibus quod provident libero, nam corrupti, adipisci ea inventore cum aliquid asperiores pariatur harum sunt. Tempore expedita atque quos ipsum nisi.</p>
+                </div>
+                <div class="col">
+                    <img src="{% static 'loginapp/images/servicios.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="info-servicios">
+            <table>
+                <tr>
+                    <td>
+                        <i class="fa-solid fa-person-walking"></i>
+                        <h3><span class="txtRojo">Clases </span> de Fitness</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis.</p>
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-dumbbell"></i>
+                        <h3><span class="txtRojo">Clases </span> de Crossfit</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis.</p>
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-mitten"></i>
+                        <h3><span class="txtRojo">Clases </span> de Boxeo</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <i class="fa-solid fa-clock"></i>
+                        <h3><span class="txtRojo">Clases </span> de Enduro</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis.</p>
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-heart-circle-bolt"></i>
+                        <h3><span class="txtRojo">Clases </span> de Cardio</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis.</p>
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-bicycle"></i>
+                        <h3><span class="txtRojo">Clases </span> de Ciclismo</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis.</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- SECCION COMODIDADES -->
+    <section id="comodidades" class="comodidades">
+        <div class="fila">
+            <div class="col">
+                <img src="{% static 'loginapp/images/nosotros.png' %}" alt="">
+            </div>
+            <div class="col">
+                <div class="contenedor-titulo">
+                    <div class="numero">
+                        03
+                    </div>
+                    <div class="info">
+                        <span class="frase">LA MEJOR EXPERIENCIA</span>
+                        <h2>COMODIDADES</h2>
+                    </div>
+                </div>
+                <p class="p-especial">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <ul>
+                    <li><span>PILETA</span> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tenetur, nam cumque adipisci ratione obcaecati impedit inventore eligendi</li>
+                    <li><span>WIFI GRATIS</span> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tenetur, nam cumque adipisci ratione obcaecati impedit inventore</li>
+                    <li><span>ESTACIONAMIENTO GRATIS</span> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tenetur, nam cumque adipisci ratione obcaecati impedit?</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION GALERIA -->
+    <section class="galeria" id="galeria">
+        <div class="contenido-seccion">
+            <div class="contenedor-titulo">
+                <div class="numero">
+                    04
+                </div>
+                <div class="info">
+                    <span class="frase">LA MEJOR EXPERIENCIA</span>
+                    <h2>GALERIA</h2>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="col">
+                    <img src="{% static 'loginapp/images/f1.jpg' %}" alt="">
+                </div>
+                <div class="col">
+                    <img src="{% static 'loginapp/images/f2.jpg' %}" alt="">
+                </div>
+                <div class="col">
+                    <img src="{% static 'loginapp/images/f3.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="fila">
+                <div class="col">
+                    <img src="{% static 'loginapp/images/f4.jpg' %}" alt="">
+                </div>
+                <div class="col">
+                    <img src="{% static 'loginapp/images/f5.jpg' %}" alt="">
+                </div>
+                <div class="col">
+                    <img src="{% static 'loginapp/images/f2.jpg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECCION EQUIPO -->
+    <section class="equipo" id="equipo">
+        <div class="contenido-seccion">
+            <div class="contenedor-titulo">
+                <div class="numero">
+                    05
+                </div>
+                <div class="info">
+                    <span class="frase">LA MEJOR EXPERIENCIA</span>
+                    <h2>EQUIPO</h2>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="col">
+                    <img src="{% static 'loginapp/images/e1.png' %}" alt="">
+                    <div class="info">
+                        <h2>MARCOS</h2>
+                        <p>Fitness - Pilates - Yoga</p>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="{% static 'loginapp/images/e2.png' %}" alt="">
+                    <div class="info">
+                        <h2>PATRICIA</h2>
+                        <p>Fitness - Pilates - Yoga</p>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="{% static 'loginapp/images/e3.png' %}" alt="">
+                    <div class="info">
+                        <h2>JUAN</h2>
+                        <p>Fitness - Pilates - Yoga</p>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <section class="contacto" id="contacto">
+        <div class="contenido-seccion">
+            <div class="contenedor-titulo">
+                <div class="numero">
+                    06
+                </div>
+                <div class="info">
+                    <span class="frase">LA MEJOR EXPERIENCIA</span>
+                    <h2>CONTACTO</h2>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="col">
+                    <input type="text" placeholder="Ingrese Email">
+                </div>
+                <div class="col">
+                    <input type="text" placeholder="Ingrese Nombre">
+                </div>
+            </div>
+            <div class="mensaje">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Ingresa el Mensaje"></textarea>
+                <button>Enviar Mensaje</button>
+            </div>
+            <div class="fila-datos">
+                <div class="col">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Avenida Morro 255
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-phone"></i>
+                    2664 - 456788
+                </div>
+                <div class="col">
+                    <i class="fa-regular fa-clock"></i>
+                    Lunes a Sábado, 8:00h - 24:00h
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="info">
+            <p>2023 - <span class="txtRojo">THE GYM</span> Todos los derechos reservados</p>
+            <div class="redes">
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'loginapp/js/home.js' %}"></script>
+</body>
+</html>

@@ -45,8 +45,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     'registro',
-    'perfil',   
-]
+    'loginapp',
+    'perfil',
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -125,6 +125,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "static/"
+
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",  # Carpeta donde almacenarás los archivos CSS/JS
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
