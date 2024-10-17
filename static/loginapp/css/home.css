@@ -45,6 +45,9 @@ body{
 p {
     color: #dde1e9;
 }
+h2{
+    color: #dde1e9
+}
 .contenedor-header header nav a:hover{
     color: #de9008;
 }

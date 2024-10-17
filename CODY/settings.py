@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'registro',
     'loginapp',
     'perfil',
+]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
