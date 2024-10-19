@@ -17,7 +17,7 @@ body{
 .contenedor-header{
     width: 100%;
     position: fixed;
-    border-bottom: 1px solid #1f283e;
+    border-bottom: 1px solid #de9008 ;
     background-color: rgba(0,0,0,.7);
     z-index: 99;
     padding: 0 20px;
@@ -131,11 +131,11 @@ h2{
 /* SECCION NOSOTROS */
 /* *********** */
 .nosotros{
+    height: 100vh;
     max-width: 1100px;
     margin: auto;
-    height: 100vh;
     background-color: #070909;
-    padding: 100px 20px;
+    padding: 130px 20px;
 }
 .nosotros .fila{
     display: flex;
@@ -178,7 +178,7 @@ h2{
     font-weight: bold;
 }
 .nosotros hr{
-    margin-bottom: 30px;
+    margin-top: 70px;
 }
 .nosotros .fila-nosotros{
     display: flex;
@@ -212,7 +212,8 @@ h2{
     position: relative;
 }
 .servicios .contenido-seccion{
-    background:linear-gradient( rgba(0, 14, 41, 0.6), rgba(0, 7, 78, 0.7)),url(../images/fondo-servicios.jpg);
+    height: 100vh;
+    background:linear-gradient( rgba(0, 0, 0, 0), rgba(42, 44, 55, 0.818)),url(../images/fondo-servicios.jpg);
     background-size: cover;
     background-position: center center;
     margin: auto;
@@ -230,7 +231,7 @@ h2{
 }
 .servicios .contenido-seccion .fila .col img{
     display: block;
-    width: 50%;
+    width: 110%;
     margin: auto;
 }
 .servicios .fila .col .contenedor-titulo{
@@ -266,7 +267,7 @@ h2{
 .servicios .info-servicios table{
     text-align: center;
     background-color: #fff;
-    color: #1f283e;
+    color: #de9008 ;
     border-collapse: collapse;
     position: relative;
     bottom: 100px;
@@ -288,68 +289,13 @@ h2{
 .servicios .info-servicios p{
     line-height: 30px;
 }
-/* *********** */
-/* COMODIDADES */
-/* *********** */
-.comodidades{
-    max-width: 1100px;
-    margin: auto;
-    background-color: #dde1e9;
-    padding: 100px 20px;
-}
-.comodidades .fila{
-    display: flex;
-    align-items: center;
-}
-.comodidades .fila .col{
-    width: 50%;
-}
-.comodidades .fila .col img{
-    width: 80%;
-    display: block;
-    margin: auto;
-    margin-bottom: 50px;
-}
-.comodidades .fila .col .contenedor-titulo{
-    display: flex;
-    align-items:center
-}
-.comodidades .fila .col .contenedor-titulo .numero{
-    color: #ff1133;
-    font-weight: bold;
-    display: block;
-    font-size: 5rem;
-}
-.comodidades .fila .col .contenedor-titulo .info{
-    margin-left: 30px;
-}
-.comodidades .fila .col .contenedor-titulo .info .frase{
-    color: #ff1133;
-}
-.comodidades .fila .col .contenedor-titulo .info h2{
-    font-size: 3rem;
-}
-.comodidades .fila .col p{
-   margin-bottom: 10px;
-   line-height: 28px;
-}
-.comodidades .fila .col .p-especial{
-    font-weight: bold;
-}
-.comodidades .fila .col li{
-    margin-bottom: 20px;
-    color: #1f283e;
-}
-.comodidades .fila .col li span{
-    font-weight: bold;
-    color: #ff1133;
-}
+
 /* ********** */
 /* GALERIA */
 /* ********** */
 .galeria{
     color: #fff;
-    background:linear-gradient( rgba(0, 14, 41, 0.6), rgba(0, 7, 78, 0.7)),url(../images/fondo-galeria.jpg);
+    background:linear-gradient( rgba(7, 9, 9, 0.53), rgba(42, 44, 55, 0.818)),url(../images/fondo-galeria.jpg);
     background-size: cover;
     background-position: center center;
     padding: 100px 0;
@@ -365,7 +311,7 @@ h2{
     margin-bottom: 40px;
 }
 .galeria  .contenedor-titulo .numero{
-    color: #ff1133;
+    color: #de9008;
     font-weight: bold;
     display: block;
     font-size: 5rem;
@@ -374,7 +320,7 @@ h2{
     margin-left: 30px;
 }
 .galeria .contenedor-titulo .info .frase{
-    color: #ff1133;
+    color: #de9008;
 }
 .galeria .contenedor-titulo .info h2{
     font-size: 3rem;
@@ -387,72 +333,11 @@ h2{
     display: block;
 }
 /* *********** */
-/* ENTRENADORES */
-/* *********** */
-.equipo{
-    max-width: 1100px;
-    margin: auto;
-    padding-top: 95px;
-    background-color: #dde1e9;
-}
-.equipo .contenedor-titulo{
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: auto;
-}
-.equipo  .contenedor-titulo .numero{
-    color: #ff1133;
-    font-weight: bold;
-    display: block;
-    font-size: 5rem;
-}
-.equipo .contenedor-titulo .info{
-    margin-left: 30px;
-}
-.equipo .contenedor-titulo .info .frase{
-    color: #ff1133;
-}
-.equipo .contenedor-titulo .info h2{
-    font-size: 3rem;
-}
-.equipo .fila{
-    margin: 50px 0;
-    display: flex;
-    justify-content: space-around;
-}
-.equipo .fila .col{
-    width: 25%;
-}
-.equipo .fila .col img{
-   max-height: 400px;
-   display: block;
-   margin: auto;
-}
-.equipo .fila .info{
-    border: 5px solid #1f283e;
-    text-align: center;
-    border-radius: 5px;
-    padding: 20px;
-    background: linear-gradient(#ff1133, #9a0e23);
-    color: #fff;
-}
-.equipo .fila .info p{
-    margin: 20px 0;
-}
-.equipo .fila .info a{
-    color: #fff;
-    text-decoration: none;
-    display: inline-block;
-    margin: 0 20px;
-    font-size: 20px;
-}
-/* *********** */
 /* CONTACTO */
 /* *********** */
 .contacto{
     color: #fff;
-    background:linear-gradient( rgba(0, 14, 41, 0.6), rgba(0, 7, 78, 0.7)),url(../images/fondo.jpg);
+    background:linear-gradient( rgba(0, 0, 0, 0.252), rgba(42, 44, 55, 0.818)),url(../images/fondo.jpg);
     background-size: cover;
     background-position: center center;
     padding: 100px 20px;
@@ -470,7 +355,7 @@ h2{
     margin: auto;
 }
 .contacto  .contenedor-titulo .numero{
-    color: #ff1133;
+    color: #de9008;
     font-weight: bold;
     display: block;
     font-size: 5rem;
@@ -479,7 +364,7 @@ h2{
     margin-left: 30px;
 }
 .contacto .contenedor-titulo .info .frase{
-    color: #ff1133;
+    color: #de9008;
 }
 .contacto .contenedor-titulo .info h2{
     font-size: 3rem;
@@ -516,7 +401,7 @@ h2{
     margin: auto;
     margin-top: 30px;
     border: none;
-    background-color: #ff1133;
+    background-color: #de9008;
     color: #fff;
     font-size: 18px;
     padding: 10px 25px;

@@ -31,15 +31,14 @@
                 <a href="#inicio" onclick="seleccionar()">inicio</a>
                 <a href="#nosotros" onclick="seleccionar()">Nosotros</a>
                 <a href="#servicios" onclick="seleccionar()">Servicios</a>
-                <a href="#comodidades" onclick="seleccionar()">Comodidades</a>
                 <a href="#galeria" onclick="seleccionar()">Galería</a>
-                <a href="#equipo" onclick="seleccionar()">Equipo</a>
                 <a href="#contacto" onclick="seleccionar()">Contacto</a>
             </nav>
             <div class="redes">
                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                <a><i></i></a>
+                {% comment %} <a href="#"><i class="fa-brands fa-square-instagram"></i></a> {% endcomment %}
+                <a href="{% url 'login' %}"><i class="fa-solid fa-user"></i></a>
             </div>
             <!-- Icono del menu responsive -->
             <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
@@ -81,8 +80,6 @@
             </div>
         </div>
         <hr>
-        <div class="fila-nosotros">
-        </div>
     </section>
 
     <!-- SECCION SERVICIOS -->
@@ -99,76 +96,16 @@
                             <h2>SERVICIOS</h2>
                         </div>
                     </div>
-                    <p class="p-especial">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur necessitatibus quod provident libero, nam corrupti, adipisci ea inventore cum aliquid asperiores pariatur harum sunt. Tempore expedita atque quos ipsum nisi.</p>
+                    <p class="p-especial">Entrenamiento Personalizado:</p>
+                    <p>Adaptamos cada rutina de ejercicio a tus necesidades y objetivos específicos, con la guía de nuestros entrenadores.</p>
+                    <p class="p-especial">Clases Grupales:</p>
+                    <p>Participa en nuestras clases grupales para diferentes niveles, desde principiantes hasta avanzados, en un ambiente motivador y divertido.</p>
+                    <p class="p-especial">Equipos de Calidad:<p>
+                    <p>Contamos con una amplia variedad de máquinas y equipos de ejercicio para que puedas entrenar de manera segura y efectiva.</p>
                 </div>
                 <div class="col">
                     <img src="{% static 'loginapp/images/servicios.png' %}" alt="">
                 </div>
-            </div>
-        </div>
-        <div class="info-servicios">
-            <table>
-                <tr>
-                    <td>
-                        <i class="fa-solid fa-person-walking"></i>
-                        <h3><span class="txtRojo">Clases </span> de Fitness</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis.</p>
-                    </td>
-                    <td>
-                        <i class="fa-solid fa-dumbbell"></i>
-                        <h3><span class="txtRojo">Clases </span> de Crossfit</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis.</p>
-                    </td>
-                    <td>
-                        <i class="fa-solid fa-mitten"></i>
-                        <h3><span class="txtRojo">Clases </span> de Boxeo</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis.</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <i class="fa-solid fa-clock"></i>
-                        <h3><span class="txtRojo">Clases </span> de Enduro</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis.</p>
-                    </td>
-                    <td>
-                        <i class="fa-solid fa-heart-circle-bolt"></i>
-                        <h3><span class="txtRojo">Clases </span> de Cardio</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis.</p>
-                    </td>
-                    <td>
-                        <i class="fa-solid fa-bicycle"></i>
-                        <h3><span class="txtRojo">Clases </span> de Ciclismo</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis.</p>
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </section>
-
-    <!-- SECCION COMODIDADES -->
-    <section id="comodidades" class="comodidades">
-        <div class="fila">
-            <div class="col">
-                <img src="{% static 'loginapp/images/nosotros.png' %}" alt="">
-            </div>
-            <div class="col">
-                <div class="contenedor-titulo">
-                    <div class="numero">
-                        03
-                    </div>
-                    <div class="info">
-                        <span class="frase">LA MEJOR EXPERIENCIA</span>
-                        <h2>COMODIDADES</h2>
-                    </div>
-                </div>
-                <p class="p-especial">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <ul>
-                    <li><span>PILETA</span> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tenetur, nam cumque adipisci ratione obcaecati impedit inventore eligendi</li>
-                    <li><span>WIFI GRATIS</span> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tenetur, nam cumque adipisci ratione obcaecati impedit inventore</li>
-                    <li><span>ESTACIONAMIENTO GRATIS</span> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tenetur, nam cumque adipisci ratione obcaecati impedit?</li>
-                </ul>
             </div>
         </div>
     </section>
@@ -210,61 +147,7 @@
         </div>
     </section>
     
-    <!-- SECCION EQUIPO -->
-    <section class="equipo" id="equipo">
-        <div class="contenido-seccion">
-            <div class="contenedor-titulo">
-                <div class="numero">
-                    05
-                </div>
-                <div class="info">
-                    <span class="frase">LA MEJOR EXPERIENCIA</span>
-                    <h2>EQUIPO</h2>
-                </div>
-            </div>
-            <div class="fila">
-                <div class="col">
-                    <img src="{% static 'loginapp/images/e1.png' %}" alt="">
-                    <div class="info">
-                        <h2>MARCOS</h2>
-                        <p>Fitness - Pilates - Yoga</p>
-                        <a href="#">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col">
-                    <img src="{% static 'loginapp/images/e2.png' %}" alt="">
-                    <div class="info">
-                        <h2>PATRICIA</h2>
-                        <p>Fitness - Pilates - Yoga</p>
-                        <a href="#">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col">
-                    <img src="{% static 'loginapp/images/e3.png' %}" alt="">
-                    <div class="info">
-                        <h2>JUAN</h2>
-                        <p>Fitness - Pilates - Yoga</p>
-                        <a href="#">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- SECCION CONTACTO -->
     <section class="contacto" id="contacto">
