@@ -20,10 +20,8 @@ from loginapp.views import index_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index_view, name='index'),  # Ruta para la página de inicio
+    path('', index_view, name='index'), # Ruta para la página de inicio
     path('registro/', include('registro.urls')),
     path('login/', include('loginapp.urls')),  # Asegúrate de que la ruta está bien
-    path('home/', include('loginapp.urls')), 
-  
-
+    path('home/', include('loginapp.urls'))
 ]
