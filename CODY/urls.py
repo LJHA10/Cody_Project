@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from loginapp.views import index_view  
+from loginapp.views import index_view 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +24,6 @@ urlpatterns = [
     path('registro/', include('registro.urls')),
     path('login/', include('loginapp.urls')),  # Asegúrate de que la ruta está bien
     path('home/', include('loginapp.urls')), 
+  
+
 ]
