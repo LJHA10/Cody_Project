@@ -9,12 +9,12 @@ pipeline {
         }
         stage('Instalar Dependencias') {
             steps {
-                bat 'pip install django' // Instala Django si no está instalado
+                bat 'pip install django'
             }
         }
         stage('Ejecutar Pruebas') {
             steps {
-                bat 'python manage.py test' // Ejecuta todas las pruebas
+                bat 'python manage.py test'
             }
         }
     }
