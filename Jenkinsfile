@@ -9,19 +9,13 @@ pipeline {
         }
         stage('Instalar Dependencias') {
             steps {
-                bat 'pip install django'
+                bat 'pip install django' // Instala Django si no está instalado
             }
         }
         stage('Ejecutar Pruebas') {
             steps {
-                bat 'python manage.py test loginapp'
+                bat 'python manage.py test' // Ejecuta todas las pruebas
             }
-        }
-    }
-
-    post {
-        always {
-            junit '**/test-results.xml' // Asegúrate de que el archivo de resultados de pruebas esté disponible
         }
     }
 }
