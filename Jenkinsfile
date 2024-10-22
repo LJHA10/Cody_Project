@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                git 'https://github.com/LJHA10/Cody_Project'
             }
         }
         stage('Instalar Dependencias') {
             steps {
-                bat 'pip install django'
+                bat 'conda activate py311 && pip install -r requirements.txt'
             }
         }
         stage('Ejecutar Pruebas') {
             steps {
-                bat 'python manage.py test'
+                bat 'conda activate py311 && python manage.py test'
             }
         }
     }
