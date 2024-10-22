@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Ejecutar Pruebas') {
             steps {
-                bat 'python manage.py test myapp' // Reemplaza 'myapp' con el nombre de tu aplicación
+                bat 'python manage.py test loginapp'
             }
         }
     }
