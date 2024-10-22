@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/LJHA10/Cody_Project.git'
+                git 'https://github.com/LJHA10/Cody_Project'
             }
         }
         stage('Build') {
