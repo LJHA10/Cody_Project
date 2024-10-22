@@ -1,53 +1,29 @@
 pipeline {
     agent any
-
+    
     stages {
         stage('Checkout') {
             steps {
-                script {
-                    // Hacemos un checkout del repositorio
-                    git url: 'https://github.com/LJHA10/Cody_Project'
-                }
+                git 'https://github.com/LJHA10/Cody_Project' // Cambia a tu repositorio
             }
         }
-        stage('Build') {
+        
+        stage('Install Dependencies') {
             steps {
-                script {
-                    // Llama a gradlew build, asegurándote de que la ruta sea correcta
-                    bat 'gradlew build'
-                }
+                bat 'pip install -r requirements.txt' // Instala dependencias
             }
         }
+        
         stage('Run Integration Tests') {
             steps {
-                script {
-                    // Ejecuta las pruebas de integración
-                    bat 'gradlew integrationTest'
-                }
-            }
-        }
-        stage('Publish Results') {
-            steps {
-                script {
-                    // Publica los resultados de las pruebas
-                    junit '**/build/test-results/**/*.xml'
-                }
+                bat 'pytest' // Ejecuta las pruebas de integración
             }
         }
     }
+    
     post {
         always {
-            // Siempre se ejecuta, incluso si la compilación falla
-            echo 'Cleaning up...'
-            cleanWs() // Limpia el espacio de trabajo
-        }
-        success {
-            // Se ejecuta solo si el pipeline tiene éxito
-            echo 'Pipeline completed successfully!'
-        }
-        failure {
-            // Se ejecuta solo si el pipeline falla
-            echo 'Pipeline failed!'
+            junit '**/test-results/**/*.xml' // Publica resultados, ajusta según tu configuración
         }
     }
 }
