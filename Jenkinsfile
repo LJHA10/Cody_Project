@@ -1,26 +1,46 @@
 pipeline {
     agent any
-    
+
     stages {
-        stage('Checkout') {
+        stage('Clone Repository') {
             steps {
                 git 'https://github.com/LJHA10/Cody_Project.git'
             }
         }
-        stage('Build') {
+
+        stage('Set Up Environment') {
             steps {
-                sh './gradlew build'
+                script {
+                    bat 'call C:\\Users\\luisj\\miniconda3\\Scripts\\activate.bat py311'
+                    env.PATH = "C:\\Users\\luisj\\miniconda3\\envs\\py311\\Scripts;C:\\Users\\luisj\\miniconda3\\envs\\py311;$PATH"
+                }
             }
         }
-        stage('Run Integration Tests') {
+
+        stage('Run Tests') {
             steps {
-                sh './gradlew integrationTest'
+                script {
+                    bat 'pytest --junitxml=report.xml'
+                }
             }
         }
-        stage('Publish Results') {
+
+        stage('Publish Test Results') {
             steps {
-                junit '**/build/test-results/**/*.xml'
+                junit 'report.xml'
             }
+        }
+    }
+
+    post {
+        always {
+            cleanWs()
+        }
+        success {
+            echo 'Tests passed!'
+        }
+        failure {
+            echo 'Tests failed!'
         }
     }
 }
