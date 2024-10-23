@@ -2,20 +2,51 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('Clone Repository') {
             steps {
-                git 'https://github.com/LJHA10/Cody_Project'
+                // Clona el repositorio
+                git 'https://your-repository-url.git'
             }
         }
-        stage('Instalar Dependencias') {
+
+        stage('Set Up Environment') {
             steps {
-                bat 'conda activate py311 && pip install -r requirements.txt'
+                script {
+                    // Activa el entorno de Conda
+                    bat 'call C:\\Users\\luisj\\miniconda3\\Scripts\\activate.bat py311'
+                    // Establece el PATH para pytest
+                    env.PATH = "C:\\Users\\luisj\\miniconda3\\envs\\py311\\Scripts;C:\\Users\\luisj\\miniconda3\\envs\\py311;$PATH"
+                }
             }
         }
-        stage('Ejecutar Pruebas') {
+
+        stage('Run Tests') {
             steps {
-                bat 'conda activate py311 && python manage.py test'
+                script {
+                    // Ejecuta pytest
+                    bat 'pytest --junitxml=report.xml'
+                }
             }
+        }
+
+        stage('Publish Test Results') {
+            steps {
+                // Publica los resultados de las pruebas
+                junit 'report.xml'
+            }
+        }
+    }
+
+    post {
+        always {
+            // Acciones que se ejecutan siempre, como limpiar el workspace
+            cleanWs()
+        }
+        success {
+            echo 'Tests passed!'
+        }
+        failure {
+            echo 'Tests failed!'
         }
     }
 }
