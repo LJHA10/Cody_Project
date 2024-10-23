@@ -95,7 +95,7 @@ h2{
 }
 .inicio .info p{
     margin: 20px;
-    color: #797e8e;
+    color: #ffffff;
     font-size: 16px;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -433,7 +433,7 @@ h2{
 /* FOOTER */
 /* *********** */
 footer{
-    background-color: #151623;
+    background-color: rgba(0,0,0,.7);;
     padding: 30px 0;
 }
 footer .info{
