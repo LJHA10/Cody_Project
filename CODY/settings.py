@@ -12,8 +12,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
-import firebase_admin
-from firebase_admin import credentials
+import firebase_admin 
+from firebase_admin import credentials 
 
 # Ruta al archivo de credenciales de Firebase
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -46,15 +46,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'registro',
     'loginapp',
-    'perfil',
-]
-
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-]
-
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'login'
+ 
+    ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
