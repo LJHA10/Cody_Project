@@ -5,7 +5,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 // Clona el repositorio
-                git 'https://your-repository-url.git'
+                git 'https://github.com/LJHA10/Cody_Project.git'
             }
         }
 
