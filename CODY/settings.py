@@ -21,8 +21,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 firebase_cred_path = os.path.join(BASE_DIR, 'firebase_credentials', 'firebase_credentials.json')
 
 # Inicializar Firebase con las credenciales
-# cred = credentials.Certificate(firebase_cred_path)
-# firebase_admin.initialize_app(cred)
+cred = credentials.Certificate(firebase_cred_path)
+firebase_admin.initialize_app(cred)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
